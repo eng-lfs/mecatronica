@@ -1,7 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-struct Student{
+using namespace std;
+
+struct Student{                    //struct for students
     int id;
     float firstNote;
     float secNote;
