@@ -32,10 +32,25 @@ string PalavraAleatoria(){
 
   return bancoPalavras[indice];
 }
+
+string retornaPalavraComMascara(string palavra, int tamanhoDaPalavra){
+  string palavraComMascara = "";
+  for(int i=0; i<tamanhoDaPalavra; i++){
+    palavraComMascara += "_ ";
+  }
+
+  return palavraComMascara;
+}
 //FUNÇÃO JOGO SOLO
 void JogarSozinho(){
   string palavra = PalavraAleatoria();
-  cout << "Palavra selecionada: " << palavra;
+  int tamanhoDaPalavra = palavra.size();
+
+  //palavra mascarada
+  string palavraComMascara = retornaPalavraComMascara(palavra, tamanhoDaPalavra);
+
+  cout << "Palavra selecionada: " << palavra << "(Tamanho: " << tamanhoDaPalavra << ")" << endl;
+  cout << "Mascara: " << palavraComMascara;
 }
 //FUNÇÃO EXIBIÇÃO DO MENU INICIAL
 void MenuInicial(){
